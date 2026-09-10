@@ -209,22 +209,21 @@
 
                 <!-- Left: Video Player -->
                 <div class="w-full md:w-[40%] flex-shrink-0 relative">
-                    <div class="aspect-[9/16] rounded-2xl overflow-hidden relative group/video cursor-pointer border border-white/10 shadow-2xl">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop"
-                            class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover/video:opacity-90 transition-opacity duration-500"
-                            alt="Vídeo Feedback">
-                        
-                        <!-- Play Button -->
-                        <div class="absolute inset-0 flex items-center justify-center z-20">
-                            <div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover/video:bg-blue-600 group-hover/video:border-blue-500 transition-all duration-300 group-hover/video:scale-110">
-                                <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
-                            </div>
-                        </div>
+                    <div class="aspect-[9/16] rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
+                        <!-- YouTube Shorts Embed -->
+                        <iframe 
+                            class="absolute inset-0 w-full h-full" 
+                            src="https://www.youtube-nocookie.com/embed/o4ZoJ78ndho?si=9KlalypgziRrw7QJ" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
 
-                        <!-- View Badge -->
-                        <div class="absolute bottom-6 left-6 z-20">
-                            <span class="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur text-xs font-semibold text-white border border-white/10 flex items-center gap-2">
+                        <!-- View Badge Overlay -->
+                        <div class="absolute bottom-6 left-6 z-20 pointer-events-none">
+                            <span class="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur text-xs font-semibold text-white border border-white/10 flex items-center gap-2 shadow-lg">
                                 <i data-lucide="eye" class="w-3 h-3 text-blue-400"></i> 250K+ Views
                             </span>
                         </div>
