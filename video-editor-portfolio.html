@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Edição de Vídeo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0A0A0C',
+                        surface: 'rgba(255, 255, 255, 0.03)',
+                        border: 'rgba(255, 255, 255, 0.05)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        oswald: ['Oswald', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            background-color: #0A0A0C;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-panel {
+            background: var(--tw-colors-surface);
+            border: 1px solid var(--tw-colors-border);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col relative overflow-x-hidden selection:bg-blue-500/30 selection:text-white">
+
+    <!-- Header -->
+    <header class="w-full max-w-[1400px] mx-auto px-6 py-6 flex justify-between items-center z-10 relative">
+        <!-- Logo / Photo -->
+        <div class="flex items-center gap-3">
+            <!-- Substitua 'sua_foto.jpg' pelo caminho da imagem que você enviou -->
+            <div
+                class="w-12 h-12 rounded-full overflow-hidden border-2 border-white/10 ring-2 ring-transparent hover:ring-blue-500/50 transition-all cursor-pointer">
+                <img src="./sua_foto.jpg" alt="Logo" class="w-full h-full object-cover"
+                    onerror="this.src='https://ui-avatars.com/api/?name=V+E&background=random&color=fff'">
+            </div>
+            <span class="text-xl font-bold tracking-tight font-oswald text-white hidden sm:block">EditorPro</span>
+        </div>
+
+        <!-- Nav Links (based on skeleton) -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+            <a href="#" class="hover:text-white transition-colors">Portfólio</a>
+            <a href="#" class="hover:text-white transition-colors">Serviços</a>
+            <a href="#" class="hover:text-white transition-colors">Sobre mim</a>
+        </nav>
+
+        <!-- Header CTA -->
+        <button
+            class="px-6 py-2.5 rounded-full bg-white/10 text-white font-medium text-sm border border-white/10 hover:bg-white hover:text-black transition-all duration-300">
+            Fale Comigo
+        </button>
+    </header>
+
+    <!-- Main Content (Hero Section) -->
+    <main
+        class="flex-1 w-full max-w-[1200px] mx-auto px-6 pt-12 md:pt-20 pb-24 flex flex-col items-center relative z-10">
+
+        <!-- Headline -->
+        <h1
+            class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-center max-w-4xl leading-[1.1] mb-12">
+            Edição Dinâmica que <br class="hidden sm:block">
+            <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600 font-oswald font-normal">Prende
+                a Atenção do Primeiro ao Último Segundo.</span>
+        </h1>
+
+        <!-- Section Title & Description -->
+        <div class="text-center mb-12 space-y-4">
+            <h2
+                class="text-2xl md:text-3xl font-semibold text-white tracking-tight uppercase tracking-widest font-oswald text-gray-300">
+                Portfólio</h2>
+            <p class="text-base md:text-lg text-gray-400 font-light max-w-2xl mx-auto">
+                Especialista em Edição de vídeos para Reels há 2 anos com entrega ágil.
+            </p>
+        </div>
+
+        <!-- 3 Big Featured Videos (Skeleton) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-6">
+            <!-- Video 1 -->
+            <div
+                class="glass-panel rounded-2xl aspect-[9/16] md:aspect-[4/5] relative overflow-hidden group cursor-pointer flex items-center justify-center transition-transform hover:-translate-y-2 duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
+                <!-- Placeholder image for video thumbnail -->
+                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop"
+                    class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+                    alt="Video 1">
+
+                <div
+                    class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 z-20 group-hover:bg-blue-600 group-hover:border-blue-500 transition-all duration-300">
+                    <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
+                </div>
+
+                <div class="absolute bottom-6 left-6 z-20">
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur text-xs font-semibold text-white border border-white/10 flex items-center gap-2">
+                        <i data-lucide="eye" class="w-3 h-3"></i> 1M+ Views
+                    </span>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div
+                class="glass-panel rounded-2xl aspect-[9/16] md:aspect-[4/5] relative overflow-hidden group cursor-pointer flex items-center justify-center transition-transform hover:-translate-y-2 duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
+                <img src="https://images.unsplash.com/photo-1516280440504-45ea07f5d376?q=80&w=600&auto=format&fit=crop"
+                    class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+                    alt="Video 2">
+
+                <div
+                    class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 z-20 group-hover:bg-blue-600 group-hover:border-blue-500 transition-all duration-300">
+                    <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
+                </div>
+
+                <div class="absolute bottom-6 left-6 z-20">
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur text-xs font-semibold text-white border border-white/10 flex items-center gap-2">
+                        <i data-lucide="eye" class="w-3 h-3"></i> 500K+ Views
+                    </span>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div
+                class="glass-panel rounded-2xl aspect-[9/16] md:aspect-[4/5] relative overflow-hidden group cursor-pointer flex items-center justify-center transition-transform hover:-translate-y-2 duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10"></div>
+                <img src="https://images.unsplash.com/photo-1535016120720-40c746a49dc1?q=80&w=600&auto=format&fit=crop"
+                    class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
+                    alt="Video 3">
+
+                <div
+                    class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 z-20 group-hover:bg-blue-600 group-hover:border-blue-500 transition-all duration-300">
+                    <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
+                </div>
+
+                <div class="absolute bottom-6 left-6 z-20">
+                    <span
+                        class="px-3 py-1.5 rounded-full bg-black/60 backdrop-blur text-xs font-semibold text-white border border-white/10 flex items-center gap-2">
+                        <i data-lucide="eye" class="w-3 h-3"></i> 250K+ Views
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 Small Videos (Thumbnails row from skeleton) -->
+        <div class="grid grid-cols-4 md:grid-cols-7 gap-3 md:gap-4 w-full mb-16">
+            <!-- Repeating similar structure for thumbs -->
+            <script>
+                // A quick inline script just to render the 7 thumbnails without cluttering the HTML too much
+                const images = [
+                    "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=200",
+                    "https://images.unsplash.com/photo-1516280440504-45ea07f5d376?q=80&w=200",
+                    "https://images.unsplash.com/photo-1535016120720-40c746a49dc1?q=80&w=200",
+                    "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=200",
+                    "https://images.unsplash.com/photo-1618365908648-e71bd5716cba?q=80&w=200",
+                    "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=200",
+                    "https://images.unsplash.com/photo-1579403124614-122a86820067?q=80&w=200"
+                ];
+                images.forEach((img, index) => {
+                    // Hide last 3 on mobile to keep grid neat
+                    const hideClass = index > 3 ? 'hidden md:flex' : 'flex';
+                    document.write(`
+                        <div class="glass-panel rounded-xl aspect-[16/10] relative overflow-hidden group cursor-pointer ${hideClass} items-center justify-center hover:border-blue-500/50 transition-colors">
+                            <div class="absolute inset-0 bg-black/40 z-10 group-hover:bg-black/10 transition-colors"></div>
+                            <img src="${img}&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" alt="Thumb ${index + 1}">
+                            <i data-lucide="play" class="w-5 h-5 text-white relative z-20 opacity-90 group-hover:scale-125 transition-transform"></i>
+                        </div>
+                    `);
+                });
+            </script>
+        </div>
+
+        <!-- Main Bottom CTA -->
+        <button
+            class="group relative inline-flex items-center justify-center px-8 md:px-12 py-4 md:py-5 font-semibold text-base md:text-lg text-white transition-all duration-300 bg-[#0A0A0C] border border-blue-500/50 rounded-full hover:bg-blue-600 hover:border-blue-500 hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:shadow-[0_0_40px_-10px_rgba(59,130,246,0.6)]">
+            <span>Quero um Orçamento Agora</span>
+            <i data-lucide="arrow-right" class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform"></i>
+
+            <!-- Subtle gradient beam effect on border -->
+            <div
+                class="absolute inset-[-1px] -z-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-500 opacity-50 blur-sm group-hover:opacity-100 transition-opacity">
+            </div>
+        </button>
+
+    </main>
+
+    <!-- Chat Bubble Widget (Bottom Right) -->
+    <a href="#"
+        class="fixed bottom-6 right-6 md:bottom-8 md:right-8 w-14 h-14 md:w-16 md:h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:scale-110 hover:bg-green-400 transition-all z-50 group">
+        <i data-lucide="message-circle"
+            class="w-7 h-7 md:w-8 md:h-8 text-white fill-current group-hover:animate-pulse"></i>
+    </a>
+
+    <!-- Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
