@@ -105,13 +105,14 @@
                 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter uppercase font-oswald text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500 drop-shadow-sm">
                 Portfólio
             </h1>
-            <p class="text-base md:text-xl text-white font-light mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
+            <p
+                class="text-base md:text-xl text-white font-light mx-auto whitespace-nowrap overflow-hidden text-ellipsis px-4">
                 Especialista em Edição de vídeos para Reels há 2 anos com entrega ágil.
             </p>
         </div>
 
         <!-- 3 Big Featured Videos (Skeleton) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-16">
             <!-- Video 1 -->
             <div
                 class="glass-panel rounded-2xl aspect-[9/16] md:aspect-[4/5] relative overflow-hidden group cursor-pointer flex items-center justify-center transition-transform hover:-translate-y-2 duration-300">
@@ -177,33 +178,7 @@
             </div>
         </div>
 
-        <!-- 7 Small Videos (Thumbnails row from skeleton) -->
-        <div class="grid grid-cols-4 md:grid-cols-7 gap-3 md:gap-4 w-full mb-16">
-            <!-- Repeating similar structure for thumbs -->
-            <script>
-                // A quick inline script just to render the 7 thumbnails without cluttering the HTML too much
-                const images = [
-                    "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=200",
-                    "https://images.unsplash.com/photo-1516280440504-45ea07f5d376?q=80&w=200",
-                    "https://images.unsplash.com/photo-1535016120720-40c746a49dc1?q=80&w=200",
-                    "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=200",
-                    "https://images.unsplash.com/photo-1618365908648-e71bd5716cba?q=80&w=200",
-                    "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=200",
-                    "https://images.unsplash.com/photo-1579403124614-122a86820067?q=80&w=200"
-                ];
-                images.forEach((img, index) => {
-                    // Hide last 3 on mobile to keep grid neat
-                    const hideClass = index > 3 ? 'hidden md:flex' : 'flex';
-                    document.write(`
-                        <div class="glass-panel rounded-xl aspect-[16/10] relative overflow-hidden group cursor-pointer ${hideClass} items-center justify-center hover:border-blue-500/50 transition-colors">
-                            <div class="absolute inset-0 bg-black/40 z-10 group-hover:bg-black/10 transition-colors"></div>
-                            <img src="${img}&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" alt="Thumb ${index + 1}">
-                            <i data-lucide="play" class="w-5 h-5 text-white relative z-20 opacity-90 group-hover:scale-125 transition-transform"></i>
-                        </div>
-                    `);
-                });
-            </script>
-        </div>
+
 
         <!-- Main Bottom CTA -->
         <button
